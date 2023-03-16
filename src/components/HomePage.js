@@ -18,10 +18,9 @@ const HomePage = () => {
           </div>
         </ul>
       </div>
+
       <div className='flex justify-center w-full h-full'>
-
         <button id='shadow' className='navButtons float-right rounded-lg h-10 w-40 bg-secondaryGreen m-5 hover:bg-secondaryShadow '><span>Spawn Rat</span></button>
-
       </div>
 
       <div className=" flex flex-col justify-center items-center gap-10 w-full">
