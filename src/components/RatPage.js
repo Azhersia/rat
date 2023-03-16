@@ -6,12 +6,6 @@ import { auth } from './firebase';
 //  function to generating the RatPage
 const RatPage = () => {
 
-  // firebase signOut function
-  const userSignOut = () => {
-    signOut(auth).then(() => {
-      console.log('sign out successfull')
-    }).catch(error => console.log(error))
-  }
   return (
     <>
       <div id='navContainer' className=''>
@@ -23,12 +17,7 @@ const RatPage = () => {
         </ul>
       </div>
 
-      <div className='flex flex-col items-end w-full'>
-        <Link to="/Login"><button onClick={userSignOut} id='shadow' className='navButtons float-right rounded-lg h-10 w-40 bg-secondaryGreen mr-5 mt-4 mb-4 hover:bg-secondaryShadow'>Log out</button></Link>
-
-      </div>
-
-      <div className='ratInfoContainer flex justify-evenly items-center'>
+      <div className='ratInfoContainer flex justify-evenly items-center mt-5'>
         <div className=' flex flex-col items-center'>
           <div id='shadow' className='h-150 w-full flex items-center justify-center bg-secondaryGreen '>
             <div className='flex flex-col'>

@@ -1,17 +1,9 @@
 // import needed assets
 import { Link } from 'react-router-dom';
-import { signOut } from 'firebase/auth';
-import { auth } from './firebase';
 
 // function generating the Inventory page
 const NavBar = () => {
 
-  // firebase signOut function
-  const userSignOut = () => {
-    signOut(auth).then(() => {
-      console.log('sign out successfull')
-    }).catch(error => console.log(error))
-  }
   return (
     <>
       <div id='navContainer' className=''>
@@ -20,12 +12,11 @@ const NavBar = () => {
             <li className='bg-mainGreen w-300 border-r-2 border-secondaryShadow'><Link to="/" className='h-full w-full block text-center px-15 py-5  hover:bg-mainGreenDarker'>Home</Link></li>
             <li className='bg-mainGreen w-300 border-r-2 border-secondaryShadow'><Link to="/Inventory" className='h-full w-full block text-center px-15 py-5 hover:bg-mainGreenDarker'>Inventory</Link></li>
             <li className='bg-mainGreen w-300'><Link to="/Setting" className='h-full w-full block text-center px-15 py-5 hover:bg-mainGreenDarker'>Settings</Link></li>
-
           </div>
         </ul>
       </div>
 
-      <div className=" flex justify-center items-center gap-20 h-full w-full flex-wrap">
+      <div className=" flex justify-center items-center gap-20 h-full w-full flex-wrap mt-5">
         <div className='h-40 cursor-pointer  '>
           <div className='h-20 border border-black rounded-t-lg flex justify-center items-center text-xl px-4 py-4'>
             <img className='w-2/4 h-full' src='cheese.png' />
@@ -35,7 +26,7 @@ const NavBar = () => {
           </div>
         </div>
 
-        <div className='h-40 '>
+        <div className='h-40 cursor-pointer  '>
           <div className='h-20 border border-black rounded-t-lg flex justify-center items-center text-xl px-4 py-4'>
             <img className='w-2/4 h-full' src='cheese.png' />
           </div>
