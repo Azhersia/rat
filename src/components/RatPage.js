@@ -8,7 +8,8 @@ const RatPage = () => {
         <ul className=' bg-mainGreen list-none overflow-hidden flex justify-evenly'>
           <div id="navbar" className='flex justify-center w-full'>
             <li className='bg-mainGreen w-300 border-r-2 border-secondaryShadow'><Link to="/" className='h-full w-full block text-center px-15 py-5  hover:bg-mainGreenDarker'>Home</Link></li>
-            <li className='bg-mainGreen w-300'><Link to="/Inventory" className='h-full w-full block text-center px-15 py-5 hover:bg-mainGreenDarker'>Inventory</Link></li>
+            <li className='bg-mainGreen w-300 border-r-2 border-secondaryShadow'><Link to="/Inventory" className='h-full w-full block text-center px-15 py-5 hover:bg-mainGreenDarker'>Inventory</Link></li>
+            <li className='bg-mainGreen w-300'><Link to="/Setting" className='h-full w-full block text-center px-15 py-5 hover:bg-mainGreenDarker'>Settings</Link></li>
           </div>
         </ul>
       </div>
