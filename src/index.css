@@ -1,13 +1,46 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #DCEADD;
+}
+
+#shadow {
+  box-shadow: 0 7px 0 #5A6F5D;
+}
+
+#shadowRed {
+  box-shadow: 0 7px 0 #832518;
+}
+
+@media only screen and (max-width: 700px) {
+  .navButtons {
+    width: 90px;
+  }
+
+  .ratInfoContainer {
+    flex-direction: column-reverse;
+  }
+
+  .infoBox {
+    margin-bottom: 2.5rem;
+  }
+
+  .homePage {
+    width: 300px;
+  }
+
+  .loginBox {
+    width: 20rem;
+  }
 }
