@@ -1,13 +1,10 @@
 // import needed assets
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebase"
+import { auth } from "./firebase.js"
 import { Link } from 'react-router-dom';
 import { React, useState } from 'react'
 
-
-// main function
 const SignUp = () => {
-
   // declare states
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -60,6 +57,5 @@ const SignUp = () => {
     </div >
   )
 }
-
 //export function
 export default SignUp;

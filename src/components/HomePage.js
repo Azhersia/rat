@@ -1,14 +1,10 @@
 // import needed assets
 import { Link } from 'react-router-dom';
-import { signOut } from 'firebase/auth';
-import { auth } from './firebase';
 import { db } from "./firebase.js"
 import { ref } from "firebase/database"
 import { useList } from 'react-firebase-hooks/database';
 
-// declares function generating the HomePage
 const HomePage = () => {
-
   // get list from firebase
   const [snapshots, loading, error] = useList(ref(db, '/Ratlist'));
   return (

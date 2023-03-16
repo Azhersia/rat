@@ -1,33 +1,26 @@
 // import needed assets
 import './App.css';
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./components/firebase"
+import { auth } from "./components/firebase.js"
 import { useNavigate, Route, Routes } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
-
-import LogIn from "./components/Login"
-import SignUp from "./components/SignUp"
-import RatPage from "./components/RatPage"
-import HomePage from "./components/HomePage"
-import Inventory from "./components/Inventory"
-import NotFound from "./components/notFound"
-import Settings from "./components/settings"
-
+import LogIn from "./components/Login.js"
+import SignUp from "./components/SignUp.js"
+import RatPage from "./components/RatPage.js"
+import HomePage from "./components/HomePage.js"
+import Inventory from "./components/Inventory.js"
+import NotFound from "./components/notFound.js"
+import Settings from "./components/settings.js"
 
 function App() {
-
-
-
   const [authUser, setAuthUser] = useState(null)
   const navigate = useNavigate();
 
-
   useEffect(() => {
-    const listen = onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, (user) => {
       if (user) {     // if there is user, set user move to /
         setAuthUser(user)
         navigate("/")
-
       } else {        // if no user, set null, move to login
         setAuthUser(null);
         navigate("/Login")

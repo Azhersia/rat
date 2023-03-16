@@ -14,7 +14,6 @@ const firebaseConfig = {
   databaseURL: "https://rattae-9a139-default-rtdb.europe-west1.firebasedatabase.app/"
 };
 
-
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app);

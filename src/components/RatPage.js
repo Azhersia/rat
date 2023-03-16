@@ -1,11 +1,7 @@
 // import needed assets
 import { Link } from 'react-router-dom';
-import { signOut } from 'firebase/auth';
-import { auth } from './firebase';
 
-//  function to generating the RatPage
 const RatPage = () => {
-
   return (
     <>
       <div id='navContainer' className=''>

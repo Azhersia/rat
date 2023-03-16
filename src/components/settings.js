@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { signOut } from 'firebase/auth';
-import { auth } from './firebase';
+import { auth } from './firebase.js';
 import { useState, useEffect } from "react"
 
 const Settings = () => {
@@ -13,10 +13,7 @@ const Settings = () => {
     }).catch(error => console.log(error))
   }
 
-
   const [color, setColor] = useState("#DCEADD")
-
-
   // get list from firebase
   function click(color) {
     setColor(color)
@@ -25,7 +22,6 @@ const Settings = () => {
   useEffect(() => {
     document.body.style.background = color
   }, [color])
-
 
   return (
     <>

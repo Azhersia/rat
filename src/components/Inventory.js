@@ -1,9 +1,7 @@
 // import needed assets
 import { Link } from 'react-router-dom';
 
-// function generating the Inventory page
 const NavBar = () => {
-
   return (
     <>
       <div id='navContainer' className=''>
@@ -19,7 +17,7 @@ const NavBar = () => {
       <div className=" flex justify-center items-center gap-20 h-full w-full flex-wrap mt-5">
         <div className='h-40 cursor-pointer  '>
           <div className='h-20 border border-black rounded-t-lg flex justify-center items-center text-xl px-4 py-4'>
-            <img className='w-2/4 h-full' src='cheese.png' />
+            <img className='w-2/4 h-full' src='cheese.png' alt='food' />
           </div>
           <div className=' rounded-b-lg h-10 w-40 flex justify-between bg-mainGreen px-7 py-1'>
             <p className='w-full  text-center'>cheese</p>
@@ -28,7 +26,7 @@ const NavBar = () => {
 
         <div className='h-40 cursor-pointer  '>
           <div className='h-20 border border-black rounded-t-lg flex justify-center items-center text-xl px-4 py-4'>
-            <img className='w-2/4 h-full' src='cheese.png' />
+            <img className='w-2/4 h-full' src='cheese.png' alt='food' />
           </div>
           <div className=' rounded-b-lg h-10 w-40 flex justify-between bg-mainGreen px-7 py-1'>
             <p className='w-full  text-center'>cheese</p>
@@ -39,6 +37,5 @@ const NavBar = () => {
     </>
   )
 }
-
 //export function
 export default NavBar;
